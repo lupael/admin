@@ -6,5 +6,5 @@ tasks:
 
   - init: bash .gitpod-init.sh
 
-    command: php artisan migrate --seed && php artisan serve
+    command: php artisan migrate --seed && php artisan serve && php -S 0.0.0.0:8000 -t public
     
