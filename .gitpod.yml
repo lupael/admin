@@ -8,3 +8,18 @@ tasks:
 
     command: php artisan migrate --seed && php artisan serve && php -S 0.0.0.0:8000 -t public
     
+    
+ports:
+  # Laravel server
+  - port: 8000
+    onOpen: open-preview
+  # MySQL server
+  - port: 3306
+    onOpen: ignore
+  # Redis
+  - port: 6379
+    onOpen: ignore
+  # PGSQL server
+  - port: 6864
+    onOpen: ignore
+    
